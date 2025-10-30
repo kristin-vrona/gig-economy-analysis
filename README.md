@@ -1,8 +1,4 @@
-text
 
-
-**4. Create `README.md`:**
-```markdown
 # Gig Economy Impact Analysis
 
 ## Project Overview
