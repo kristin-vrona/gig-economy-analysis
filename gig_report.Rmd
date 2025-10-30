@@ -1,5 +1,3 @@
-r
-
 ---
 title: "Gig Economy Impact Analysis"
 author: "Kristin Vrona"
