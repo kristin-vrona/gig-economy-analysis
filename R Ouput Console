@@ -1,0 +1,45 @@
+Creating synthetic employment data...
+Created data for 2000 workers over 8 quarters
+
+=== BASIC ANALYSIS ===
+# A tibble: 8 x 4
+  quarter gig_rate avg_income income_sd
+*   <int>    <dbl>      <dbl>     <dbl>
+1       1    0.190     14064.     2863.
+2       2    0.264     13995.     3048.
+3       3    0.292     14012.     3033.
+4       4    0.33      14076.     3115.
+5       5    0.378     14069.     3183.
+6       6    0.450     13984.     3226.
+7       7    0.490     13925.     3254.
+8       8    0.547     13940.     3261.
+
+Income Comparison:
+# A tibble: 2 x 4
+  is_gig_worker mean_income income_volatility n_observations
+* <lgl>               <dbl>             <dbl>          <int>
+1 FALSE              15239.             2600.          10118
+2 TRUE               11891.             2802.           5882
+
+=== ECONOMETRIC ANALYSIS ===
+Fixed Effects Model Results:
+OLS estimation, Dep. Var.: quarterly_income
+Observations: 16,000 
+Fixed-effects: worker_id: 2,000
+Standard-errors: Clustered (worker_id) 
+                  Estimate Std. Error  t value  Pr(>|t|)    
+is_gig_workerTRUE -3046.50     33.616 -90.6280 < 2.2e-16 ***
+factor(quarter)2    157.39     41.711   3.7733  0.000166 ***
+factor(quarter)3    260.22     43.084   6.0397  1.84e-09 ***
+factor(quarter)4    440.36     43.013  10.2380 < 2.2e-16 ***
+factor(quarter)5    580.27     43.751  13.2630 < 2.2e-16 ***
+factor(quarter)6    714.99     46.765  15.2890 < 2.2e-16 ***
+factor(quarter)7    774.83     46.723  16.5830 < 2.2e-16 ***
+factor(quarter)8    965.04     49.927  19.3290 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1,432.3     Adj. R2: 0.759836
+                Within R2: 0.461537
+
+Creating visualizations...
+Analysis complete! Check the generated PNG files and HTML.
