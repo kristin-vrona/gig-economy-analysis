@@ -1,0 +1,13 @@
+r
+
+---
+title: "Gig Economy Impact Analysis"
+author: "Kristin Vrona"
+date: "10/30/2025"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+source("requirements.R")
+source("gig_analysis.R")
